@@ -1,0 +1,34 @@
+<h1>Listing FX Companies</h1>
+
+<table>
+  <caption>FX会社一覧</caption>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>URL</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+<% @fx_companies.each do |fx_company| %>
+  <tr>
+    <td><%= fx_company.name %></td>
+    <td><%= fx_company.url %></td>
+    <td><%= fx_company.comment %></td>
+    <td><%= link_to 'Show', fx_company %></td>
+    <td><%= link_to 'Edit', edit_fx_company_path(fx_company) %></td>
+    <td><%= link_to 'Destroy', fx_company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fx company', new_fx_company_path %>
+<br />
+<%= link_to 'Top',  :controller => 'home', :action => 'index' %>
+
+

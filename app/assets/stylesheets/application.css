@@ -11,3 +11,45 @@
  *= require_self
  *= require_tree .
  */
+
+/* --- 表全体 --- */
+table {
+    width: 800px; /* 表の幅 */
+    margin-bottom: 30px; /* 表の下マージン */
+    border: 2px #000002 solid; /* 大枠の境界線 */
+    border-collapse: collapse;
+    font-size: 100%;
+}
+
+/* --- 表タイトル --- */
+table caption {
+    padding-bottom: 5px; /* 表タイトルの下パディング */
+}
+
+/* --- セル --- */
+table th,
+table td {
+    /* width: 20%; */ /* セルの幅（セルの幅を均等にする場合） */
+    padding: 6px 8px; /* セルのパディング（上下、左右） */
+    border: 1px rgba(2, 2, 7, 0.87) solid; /* セルの境界線 */
+}
+
+/* --- 見出しセル --- */
+table thead th {
+    background-color: #deefff; /* 見出しセルの背景色 */
+    text-align: center;
+}
+
+/* --- フッタセル --- */
+table tfoot td {
+    background-color: #f5f5f5; /* フッタセルの背景色 */
+}
+
+/* --- データセル --- */
+table tbody td {
+    background-color: rgba(2, 1, 5, 0); /* データセルの背景色 */
+}
+
+table tbody tr:hover {
+    background-color: #f3ff80;
+}

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @fx_company.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @fx_company.url %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @fx_company.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_fx_company_path(@fx_company) %> |
+<%= link_to 'Back', fx_companies_path %>
