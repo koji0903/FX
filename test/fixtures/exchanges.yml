@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fx_company: 
+  kind: MyString
+  path: MyString
+
+two:
+  fx_company: 
+  kind: MyString
+  path: MyString

@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601020500) do
+ActiveRecord::Schema.define(:version => 20130602025424) do
+
+  create_table "exchanges", :force => true do |t|
+    t.integer  "fx_company_id"
+    t.string   "kind"
+    t.string   "path"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "exchanges", ["fx_company_id"], :name => "index_exchanges_on_fx_company_id"
 
   create_table "fx_companies", :force => true do |t|
     t.string "name"

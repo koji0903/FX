@@ -1,6 +1,9 @@
 FX::Application.routes.draw do
-  resources :fx_companies
+  resources :fx_companies do
+    resources :exchanges
+  end
 
+  match '*a', :to => 'errors#routing'
 
   get "home/index"
 
