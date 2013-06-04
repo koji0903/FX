@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+
+h1 {
+    color: blue;
+}
 /* --- 表全体 --- */
 table {
     width: 800px; /* 表の幅 */
@@ -51,5 +55,5 @@ table tbody td {
 }
 
 table tbody tr:hover {
-    background-color: #f3ff80;
+    background-color: #fffce5;
 }

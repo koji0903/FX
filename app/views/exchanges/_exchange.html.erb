@@ -1,8 +1,10 @@
 <p>
-  　<b>Path(Kind) : </b>
-  　<%= exchange.path %>
-  (
-  　<%= exchange.kind %>
-  )
+<b></b>Path(Kind) : <%= exchange.path %> (<%= exchange.kind %>)</b>
+</p>
+
+<p>
+  <%= link_to 'Destroy Exchange', [exchange.fx_company, exchange],
+              :confirm => 'Are you sure?',
+              :method => :delete %>
 </p>
 

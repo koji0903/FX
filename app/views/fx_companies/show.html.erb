@@ -15,25 +15,12 @@
   <%= @fx_company.comment %>
 </p>
 
-<p>
-  <b>Exchange:</b>
-  <%= render @fx_company.exchanges %>
-</p>
+<h2>Exchange:</h2>
+<%= render @fx_company.exchanges %>
 
 <h2>Add a exchange:</h2>
-<%= form_for([@fx_company, @fx_company.exchanges.build]) do |f| %>
-    　<div class="field">
-  　　<%= f.label :kind %><br />
-  　　<%= f.text_field :kind %>
-  　</div>
-    　<div class="field">
-  　　<%= f.label :path %><br />
-  　　<%= f.text_field :path %>
-  　</div>
-    　<div class="actions">
-  　　<%= f.submit %>
-  　</div>
-<% end %>
+<%= render "exchanges/form" %>
 
 <%= link_to 'Edit', edit_fx_company_path(@fx_company) %> |
 <%= link_to 'Back', fx_companies_path %>
+

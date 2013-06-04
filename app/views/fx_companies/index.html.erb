@@ -1,4 +1,5 @@
 <h1>Listing FX Companies</h1>
+<p id="notice"><%= notice %></p>
 
 <table>
   <caption>FX会社一覧</caption>
@@ -30,5 +31,13 @@
 <%= link_to 'New Fx company', new_fx_company_path %>
 <br />
 <%= link_to 'Top',  :controller => 'home', :action => 'index' %>
+
+<script>
+    $(function(){
+                set setTimeout(){
+                    $('#notice').fadeOut("slow")
+                }
+            }, 800);
+</script>
 
 

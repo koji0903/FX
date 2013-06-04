@@ -3,7 +3,7 @@ FX::Application.routes.draw do
     resources :exchanges
   end
 
-  match '*a', :to => 'errors#routing'
+  #match '*a', :to => 'errors#routing'
 
   get "home/index"
 
