@@ -1,0 +1,26 @@
+<h1>getCSV</h1>
+
+<%= @exchange.kind %><br />
+<%= @csv_url %><br />
+
+
+<table class="table">
+  <tr>
+    <th>Date</th>
+    <th>Start</th>
+    <th>Highest</th>
+    <th>Lowest</th>
+    <th>End</th>
+  </tr>
+
+  <% @lines.each do |line| %>
+      <% line.split(",").each_with_index do |val,i| %>
+          <% if val =~ /\// %>
+              <th><%= val %></th>
+          <% else %>
+              <td align="right"><%= val %></td>
+          <% end %>
+      <% end %>
+      </tr>
+  <% end %>
+</table>

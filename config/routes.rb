@@ -1,10 +1,8 @@
 FX::Application.routes.draw do
-  resources :historicals
-
 
   resources :fx_companies do
     resources :exchanges do
-      resources :historicals
+      get "historicals/getCSV"
     end
   end
 
