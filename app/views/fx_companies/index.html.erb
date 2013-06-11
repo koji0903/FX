@@ -7,7 +7,7 @@
   <tr>
     <th>Name</th>
     <th>URL</th>
-    <th>Comment</th>
+    <th>Exchange</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +18,14 @@
   <tr>
     <td><%= fx_company.name %></td>
     <td><%= fx_company.url %></td>
-    <td><%= fx_company.comment %></td>
+
+    <td>
+      <% fx_company.exchanges.each do |exchange| %>
+      [<%= exchange.kind %>]
+      <% end %>
+    </td>
+
+<!--    <td><%= fx_company.comment %></td> -->
     <td><%= link_to 'Show', fx_company %></td>
     <td><%= link_to 'Edit', edit_fx_company_path(fx_company) %></td>
     <td><%= link_to 'Destroy', fx_company, method: :delete, data: { confirm: 'Are you sure?' } %></td>

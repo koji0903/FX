@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+FxCompany.create( :name => "M2J",
+                  :url => "http://www.m2j.co.jp/" ,
+                  :comment => ""
+)
+FxCompany.create( :name => "Monex FX",
+                  :url  => "https://www.monexfx.co.jp/",
+                  :comment => ""
+)
