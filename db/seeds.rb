@@ -14,3 +14,24 @@ FxCompany.create( :name => "Monex FX",
                   :url  => "https://www.monexfx.co.jp/",
                   :comment => ""
 )
+
+# http://www.m2j.co.jp/market/pchistry_dl.php?ccy=1&type=d
+#  1: USD/JYP
+#  2: EUR/JPY
+#  3; EUR/USD
+=begin
+Exchange.create( :fx_company_id => 1,
+                 :kind => "USD/JPY",
+                 :path => "market/pchistry_dl.php?ccy=1&type=d"
+)
+
+Exchange.create( :fx_company_id => 1,
+                 :kind => "EUR/JPY",
+                 :path => "market/pchistry_dl.php?ccy=2&type=d"
+)
+
+Exchange.create( :fx_company_id => 1,
+                 :kind => "EUR/USD",
+                 :path => "market/pchistry_dl.php?ccy=3&type=d"
+)
+=end

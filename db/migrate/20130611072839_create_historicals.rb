@@ -1,7 +1,7 @@
 class CreateHistoricals < ActiveRecord::Migration
   def change
     create_table :historicals do |t|
-      t.date :date
+      t.date :date, :unique => true
       t.float :start
       t.float :highest
       t.float :lowest
