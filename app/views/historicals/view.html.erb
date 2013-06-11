@@ -1,0 +1,27 @@
+<h1>Historical Data</h1>
+
+<%= @exchange.kind %><br />
+<%= @csv_url %><br />
+
+
+<table class="table">
+  <tr>
+    <th>Date</th>
+    <th>Start</th>
+    <th>Highest</th>
+    <th>Lowest</th>
+    <th>End</th>
+    <th>Change</th>
+  </tr>
+
+  <% @historicals.each do |h| %>
+      <tr>
+        <th><%= h.date %></th>
+        <td align="right"><%= h.start %></td>
+        <td align="right"><%= h.highest %></td>
+        <td align="right"><%= h.lowest %></td>
+        <td align="right"><%= h.end %></td>
+        <td align="right"><%= h.change.round(5) %></td>
+      </tr>
+  <% end %>
+</table>
