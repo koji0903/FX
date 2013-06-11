@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @historical.date %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @historical.start %>
+</p>
+
+<p>
+  <b>Highest:</b>
+  <%= @historical.highest %>
+</p>
+
+<p>
+  <b>Lowest:</b>
+  <%= @historical.lowest %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @historical.end %>
+</p>
+
+<p>
+  <b>Change:</b>
+  <%= @historical.change %>
+</p>
+
+<p>
+  <b>Exchange:</b>
+  <%= @historical.exchange %>
+</p>
+
+
+<%= link_to 'Edit', edit_historical_path(@historical) %> |
+<%= link_to 'Back', historicals_path %>

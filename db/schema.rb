@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602025424) do
+ActiveRecord::Schema.define(:version => 20130611072839) do
 
   create_table "exchanges", :force => true do |t|
     t.integer  "fx_company_id"
@@ -28,5 +28,19 @@ ActiveRecord::Schema.define(:version => 20130602025424) do
     t.string "url"
     t.string "comment"
   end
+
+  create_table "historicals", :force => true do |t|
+    t.date     "date"
+    t.float    "start"
+    t.float    "highest"
+    t.float    "lowest"
+    t.float    "end"
+    t.float    "change"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "historicals", ["exchange_id"], :name => "index_historicals_on_exchange_id"
 
 end

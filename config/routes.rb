@@ -1,6 +1,11 @@
 FX::Application.routes.draw do
+  resources :historicals
+
+
   resources :fx_companies do
-    resources :exchanges
+    resources :exchanges do
+      resources :historicals
+    end
   end
 
   #match '*a', :to => 'errors#routing'

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-06-11
+  start: 1.5
+  highest: 1.5
+  lowest: 1.5
+  end: 1.5
+  change: 1.5
+  exchange: 
+
+two:
+  date: 2013-06-11
+  start: 1.5
+  highest: 1.5
+  lowest: 1.5
+  end: 1.5
+  change: 1.5
+  exchange: 
