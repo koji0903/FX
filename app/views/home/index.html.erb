@@ -1,5 +1,23 @@
-<h1>FX</h1>
-<p>FX Analyzer Tool</p>
-<br>
-<p1>FX Company</p1>
-<%= link_to "FX Company", fx_companies_path %>
+<h1>Welcome to FX-Apps</h1>
+<p>This Page is for FX winners</p>
+
+<h2>Application List</h2>
+<ul>
+
+  <li><%= link_to 'FX Company', fx_companies_path %></li>
+  <ul>
+    <li><%= link_to 'Index Page', fx_companies_path %></li>
+    <li><%= link_to 'New Page', new_fx_company_path %></li>
+    <li><%= link_to 'Show Page', fx_companies_path(@fx_company) %></li>
+  </ul>
+
+  </ul>
+
+<h2>Link</h2>
+  <ul>
+    <li><%= link_to 'Rails Guide', "rails_home.html", :target => "_brank" %> - Original Rails Home</li>
+    <li><!-- Link to Google --><%= @Google.html_safe %></li>
+    <li><%= link_to "Ruby on Rails", "http://rubyonrails.org/", :target => "_brank" %> - Official Site</li>
+  </ul>
+
+

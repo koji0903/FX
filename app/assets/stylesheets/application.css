@@ -14,46 +14,50 @@
 
 
 h1 {
-    color: blue;
-}
-/* --- 表全体 --- */
-table {
-    width: 800px; /* 表の幅 */
-    margin-bottom: 30px; /* 表の下マージン */
-    border: 2px #000002 solid; /* 大枠の境界線 */
-    border-collapse: collapse;
-    font-size: 100%;
+    /*	background-color : green;*/
+    vertical-align: text-bottom;
+    height : 30px;
+    text-shadow:3px 3px 2px #0000ff;
+    /*	border-radius: 50px 	50px 50px 50px / 50px 50px 50px 50px;*/
+    box-shadow: 1px 1px;
 }
 
-/* --- 表タイトル --- */
-table caption {
-    padding-bottom: 5px; /* 表タイトルの下パディング */
+.table {
+    width: 600px;/*$B%F!<%V%k$NI}(B*/
+    margin-top:20px;/*$B%F!<%V%k$N>e$K%9%Z!<%9(B*/
+    margin-left:10px;/*$B:8$K%9%Z!<%9(B*/
+    margin-bottom:10px;/*$B%F!<%V%k$N2<$K%9%Z!<%9(B*/
 }
 
-/* --- セル --- */
-table th,
-table td {
-    /* width: 20%; */ /* セルの幅（セルの幅を均等にする場合） */
-    padding: 6px 8px; /* セルのパディング（上下、左右） */
-    border: 1px rgba(2, 2, 7, 0.87) solid; /* セルの境界線 */
+.table td, .table th{
+    border-right: 1px solid #999999;/*$B@~$N?'(B*/
+    border-bottom: 1px solid #999999;/*$B@~$N?'(B*/
 }
 
-/* --- 見出しセル --- */
-table thead th {
-    background-color: #deefff; /* 見出しセルの背景色 */
-    text-align: center;
+.table {
+    border-top: 1px solid #999999;/*$B@~$N?'(B*/
+    border-left: 1px solid #999999;/*$B@~$N?'(B*/
 }
 
-/* --- フッタセル --- */
-table tfoot td {
-    background-color: #f5f5f5; /* フッタセルの背景色 */
+.table .status {
+    text-align:center;
 }
 
-/* --- データセル --- */
-table tbody td {
-    background-color: rgba(2, 1, 5, 0); /* データセルの背景色 */
+.table .num {
+    text-align:right;
 }
 
-table tbody tr:hover {
-    background-color: #fffce5;
+.table td, .table th {
+    padding:3px 12px;
+}
+
+.table tr {
+//background-image:url(bk2.gif);
+    background-color: lightcyan;
+    border-right:solid 1px #999999;
+    border-bottom:solid 1px #999999;
+}
+
+.table th {
+    background-image:url(bk1.gif);
 }

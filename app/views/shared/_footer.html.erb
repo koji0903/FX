@@ -1,0 +1,15 @@
+<br />
+<hr>
+<%= link_to image_tag('rails.png'), "/" %><br />
+<!-- <%= link_to '[Home]', "/" %><br /> -->
+<%= mail_to 'koji0903@gmail.com', "[E-mail]" , :encode => 'javascript' %><br />
+<script>
+var day = new Date(document.lastModified);
+var y = day.getFullYear();			
+var m = day.getMonth() + 1;			
+var d = day.getDate();
+document.write("Last Update: " + y + "/" + m + "/" + d );
+</script>
+<p>
+Copyright(c) 2013 KHSoft All right reserved.
+</p>
