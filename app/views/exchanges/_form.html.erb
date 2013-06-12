@@ -1,13 +1,13 @@
 <%= form_for([@fx_company, @fx_company.exchanges.build]) do |f| %>
-    　<div class="field">
-  　　<%= f.label :kind %><br />
-  　　<%= f.text_field :kind %>
-  　</div>
-    　<div class="field">
-  　　<%= f.label :path %><br />
-  　　<%= f.text_field :path %>
-  　</div>
-    　<div class="actions">
-  　　<%= f.submit %>
-  　</div>
+<div class="field">
+<%= f.label :kind %><br />
+<%= f.text_field :kind %>
+</div>
+<div class="field">
+<%= f.label :path %><br />
+<%= f.text_field :path %>
+</div>
+<div class="actions">
+<%= f.submit %>
+</div>
 <% end %>

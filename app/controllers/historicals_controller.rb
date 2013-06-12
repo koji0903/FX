@@ -7,6 +7,9 @@ require 'fileutils'
 
 class HistoricalsController < ApplicationController
 
+  def index
+  end
+
   def getCSV
     @fx_company = FxCompany.find(params[:fx_company_id])
     @exchange = Exchange.find(params[:exchange_id])
@@ -73,6 +76,8 @@ class HistoricalsController < ApplicationController
   end
 
   def view
+    getCSV
+
     @fx_company = FxCompany.find(params[:fx_company_id])
     @exchange = Exchange.find(params[:exchange_id])
     @historicals = Historical.find(:all,

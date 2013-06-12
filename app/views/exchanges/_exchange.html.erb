@@ -1,7 +1,6 @@
 <p>
 <b></b>Path(Kind) : <%= exchange.path %> (<%= exchange.kind %>)</b>
-</p>
-
+[<%= link_to 'Exchange', fx_company_exchange_path(exchange.fx_company, exchange)	 %>]</p>
 <p>
   <%= link_to 'Destroy Exchange', [exchange.fx_company, exchange],
               :confirm => 'Are you sure?',
