@@ -1,0 +1,6 @@
+<h1>Show Exchange</h1>
+
+<p><%= @fx_company.name %></p>
+<p><%= @exchange.kind %></p>
+
+<p><%= link_to 'Viewer', fx_company_exchange_historicals_view_path(@fx_company_id, @exchange_id) %>
