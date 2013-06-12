@@ -1,22 +1,17 @@
+<h1>Exchange Information</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>FX Company Name:</b>
   <%= @fx_company.name %>
+  (<%= @fx_company.url %>)
 </p>
 
-<p>
-  <b>Url:</b>
-  <%= @fx_company.url %>
-</p>
-
-<p>
-  <b>Comment:</b>
-  <%= @fx_company.comment %>
-</p>
 
 <h2>Exchange:</h2>
+<ul>
 <%= render @fx_company.exchanges %>
+</ul>
 
 <h2>Add a exchange:</h2>
 <%= render "exchanges/form" %>

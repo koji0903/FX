@@ -64,14 +64,6 @@ class HistoricalsController < ApplicationController
         else
         end        
       end
-#
-#      @match_data = Historical.find_by_date(@historical.date).nil?
-#      if @match_data.nil?
-#        @match_data = Historical.find_by_date(@historical.date).nil?        
-#        if @historical.save
-#        else
-#        end
-#      end
     end
   end
 

@@ -1,6 +1,6 @@
-<h1>Historical Data</h1>
+<h1>Historical Data (<%= @exchange.kind %>)</h1>
 
-<%= @exchange.kind %><br />
+<p><%= link_to "Back to List", fx_company_path(@fx_company) %></p>
 <%= @csv_url %><br />
 
 

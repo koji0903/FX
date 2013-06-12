@@ -1,9 +1,8 @@
-<p>
-<b></b>Path(Kind) : <%= exchange.path %> (<%= exchange.kind %>)</b>
-[<%= link_to 'Exchange', fx_company_exchange_path(exchange.fx_company, exchange)	 %>]</p>
-<p>
-  <%= link_to 'Destroy Exchange', [exchange.fx_company, exchange],
+<li><%= exchange.kind %>
+<!-- [<%= link_to 'Exchange', fx_company_exchange_path(exchange.fx_company, exchange)	 %>]-->
+[<%= link_to 'Historial Table(ALL)', fx_company_exchange_historicals_view_path(exchange.fx_company, exchange) %>]
+ (path:<%= exchange.path %>)
+  - <%= link_to 'Remove', [exchange.fx_company, exchange],
               :confirm => 'Are you sure?',
               :method => :delete %>
-</p>
-
+</li>
