@@ -17,3 +17,7 @@
 # Ignore RubyMine file
 /.idea
 
+# MyData
+/files/historical_data/*.csv
+
+

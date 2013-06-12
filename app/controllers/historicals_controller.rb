@@ -3,6 +3,8 @@ require 'net/http'
 require 'open-uri'
 Net::HTTP.version_1_2
 
+require 'fileutils'
+
 class HistoricalsController < ApplicationController
 
   def getCSV
@@ -13,10 +15,32 @@ class HistoricalsController < ApplicationController
     # Historical CSV Data URL
     @csv_url =  @fx_company.url + @exchange.path
 
-    @lines = Array.new
+    # Save File
+    csv_data = Array.new
+    new_file = "files/historical_data/tmp" 
+    f = open(new_file,"w")
     open(@csv_url).each_with_index do |line,i|
       next if i == 0 # Comment Line
+      f.printf line
+      csv_data << line
+    end    
+    f.close
 
+    # Compare
+    base_file = "files/historical_data/" + @exchange.kind.gsub("/","_") + ".csv"
+    if File.exist?(base_file)
+      base_data = IO.readlines(base_file)
+      new_data = IO.readlines(new_file)
+      if base_data == new_data
+        FileUtils.rm(new_file)
+        return
+      end
+    else
+      FileUtils.mv(new_file,base_file)
+    end
+
+    @lines = Array.new
+    csv_data.each_with_index do |line,i|
       each_data = line.split(",")
 
       @historical = Historical.new
