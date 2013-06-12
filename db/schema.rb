@@ -37,10 +37,12 @@ ActiveRecord::Schema.define(:version => 20130611072839) do
     t.float    "end"
     t.float    "change"
     t.integer  "exchange_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "fx_company_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   add_index "historicals", ["exchange_id"], :name => "index_historicals_on_exchange_id"
+  add_index "historicals", ["fx_company_id"], :name => "index_historicals_on_fx_company_id"
 
 end
