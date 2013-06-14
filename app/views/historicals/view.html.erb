@@ -6,22 +6,49 @@
 
 <table class="table">
   <tr>
-    <th>Date</th>
-    <th>Start</th>
-    <th>Highest</th>
-    <th>Lowest</th>
-    <th>End</th>
-    <th>Change</th>
+    <th align="center">Date</th>
+    <th align="center">Start</th>
+    <th align="center">Highest</th>
+    <th align="center">Lowest</th>
+    <th align="center">End</th>
+    <th align="center">Change</th>
   </tr>
 
-  <% @historicals.each do |h| %>
+  <% @historicals.each_with_index do |h,i| %>
+      <% @prev_historical = @historicals[i+1] unless  @historicals[i+1].nil? %>
       <tr>
         <th><%= h.date %></th>
-        <td align="right"><%= h.start %></td>
-        <td align="right"><%= h.highest %></td>
-        <td align="right"><%= h.lowest %></td>
-        <td align="right"><%= h.end %></td>
-        <td align="right"><%= h.change.round(5) %></td>
+
+	<% if h.start > @prev_historical.start %>
+	        <td align="right" class="value_up"><%= h.start %></td>
+	<% else %>
+	        <td align="right" class="value_down"><%= h.start %></td>
+	<% end %>
+
+	<% if h.highest > @prev_historical.highest %>
+	        <td align="right" class="value_up"><%= h.highest %></td>
+	<% else %>
+	        <td align="right" class="value_down"><%= h.highest %></td>
+	<% end %>
+
+	<% if h.lowest > @prev_historical.lowest %>
+	        <td align="right" class="value_up"><%= h.lowest %></td>
+	<% else %>
+	        <td align="right" class="value_down"><%= h.lowest %></td>
+	<% end %>
+
+	<% if h.end > @prev_historical.end %>
+	        <td align="right" class="value_up"><%= h.end %></td>
+	<% else %>
+	        <td align="right" class="value_down"><%= h.end %></td>
+	<% end %>
+
+	<% if h.change > 0 %>
+	        <td align="right" class="value_up"><%= h.change.round(5) %></td>
+	<% else %>
+	        <td align="right" class="value_down"><%= h.change.round(5) %></td>
+	<% end %>
+
       </tr>
   <% end %>
 </table>

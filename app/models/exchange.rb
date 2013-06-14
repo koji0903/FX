@@ -3,4 +3,7 @@ class Exchange < ActiveRecord::Base
   attr_accessible :kind, :path, :fx_company_id
 
   has_many :historicals
+
+  validates :kind, :presence => true
+  validates :path, :presence => true
 end

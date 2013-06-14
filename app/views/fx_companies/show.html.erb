@@ -13,6 +13,15 @@
 <%= render @fx_company.exchanges %>
 </ul>
 
+<%= form_for @fx_company do |c| %>
+	<%= c.label "Historical View : " %>
+<!--	<%= c.collection_select :name, Exchange.all, :id, :kind, :include_blank => true %> -->
+	<%= c.collection_select :name, Exchange.all, :id , :kind, :include_blank => true %>
+<div class="actions">
+<%= c.submit("View") %>
+</div>
+<% end %>
+
 <h2>Add a exchange:</h2>
 <%= render "exchanges/form" %>
 

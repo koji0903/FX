@@ -12,6 +12,19 @@
  *= require_tree .
  */
 
+body {
+	text-align: left;
+	margin: 20px;
+}
+
+.main {  
+    width: 100%;  
+}  
+
+.main div {
+	width: 100%;
+	margin: 0 auto;
+}
 
 h1 {
     /*	background-color : green;*/
@@ -23,10 +36,10 @@ h1 {
 }
 
 .table {
-    width: 600px;/*テーブルの幅*/
-    margin-top:20px;/*テーブルの上にスペース*/
-    margin-left:10px;/*左にスペース*/
-    margin-bottom:10px;/*テーブルの下にスペース*/
+    width: 600px;
+    margin-top:20px;
+    margin-left:10px;
+    margin-bottom:10px;
 }
 
 .table td, .table th{
@@ -53,9 +66,17 @@ h1 {
 
 .table tr {
 //background-image:url(bk2.gif);
-    background-color: lightcyan;
+//    background-color: lightcyan;
     border-right:solid 1px #999999;
     border-bottom:solid 1px #999999;
+}
+
+.table td.value_up {
+    background-color: lightcyan;
+}
+
+.table td.value_down {
+    background-color: lightpink;
 }
 
 .table th {

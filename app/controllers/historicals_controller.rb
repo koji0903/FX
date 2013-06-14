@@ -37,10 +37,11 @@ class HistoricalsController < ApplicationController
       if base_data == new_data
         FileUtils.rm(new_file)
         return
+      else
+        FileUtils.rm(base_file)
       end
-    else
-      FileUtils.mv(new_file,base_file)
     end
+    FileUtils.mv(new_file,base_file)
 
     @lines = Array.new
     csv_data.each_with_index do |line,i|
@@ -77,6 +78,12 @@ class HistoricalsController < ApplicationController
                                                     params[:fx_company_id], params[:exchange_id] ])
     @historicals = @historicals.sort_by{|h| - h.date.to_s.gsub("-","").to_i }
 
+    @prev_historical = Historical.new
+    @prev_historical.start = 0
+    @prev_historical.highest = 0
+    @prev_historical.lowest = 0
+    @prev_historical.end = 0
+    @prev_historical.change = 0
   end
 
 end
